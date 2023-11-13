@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <errno.h>
+#include <inttypes.h>
 
 #define RAND 200
 
@@ -150,15 +152,24 @@ void Uniao(Point *ponto, int size){
  }
 }
 
-int main(){
-  float VetRef[3] = {0, 1, 0};
-  int T = 0;
-  srand(time(0));
-
-  printf("Informe a quantidade de vetores: ");
-  scanf("%d", &T);
-
+int main(int argc, char** argv){
   clock_t begin = clock();
+	intmax_t T = 0;
+
+	if(argc == 1){
+    printf("nenhum argumento fornecido");
+	}else if (argc > 2){
+    printf("muitos argumentos fornecidos");
+	} else {
+    intmax_t num = strtoimax(argv[1], NULL, 10);
+		if(num == INTMAX_MAX && errno == ERANGE){
+		  printf("Não foi possivel converter");
+			exit(-1);
+		}else{ T = num;}
+	}
+
+  float VetRef[3] = {0, 1, 0};
+  srand(time(0));
 
   Point *ponto = IniciarVet(T);
   Preencher(ponto, T);
