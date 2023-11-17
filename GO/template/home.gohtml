@@ -13,7 +13,7 @@
 			<ul id="userlist">
      	 	{{ range .Usuarios }}
 				<li>
-					<button class="" onclick="deleteuser({{.ID}})">X</button>
+					<button id="deleteButton" user-id="{{.ID}}">X</button>
 					{{ .ID }}
 					{{ .Nome }}
 					{{ .Cursos }}

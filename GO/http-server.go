@@ -69,8 +69,8 @@ func dashboard(w http.ResponseWriter, r *http.Request){
         index = i
 			} 
 		}
-		Pessoas[index]= Pessoas[len(Pessoas)-1]
-		Pessoas = Pessoas[:len(Pessoas)-1]
+		fmt.Printf("index: %d", index)
+		Pessoas = append(Pessoas[:index], Pessoas[index+1:]...)
 	default:
 		fmt.Printf("Código falhou miseravelmente")
 	}
