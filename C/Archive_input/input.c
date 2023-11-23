@@ -3,7 +3,7 @@
 
 typedef struct {
   char ch;
-	int f;
+  int f;
 } CC;
 
 CC* IniciarVet(){
@@ -11,7 +11,7 @@ CC* IniciarVet(){
   for(int i = 0; i < 255; i++){
       vet[i].ch = i;
       vet[i].f = 0;
-  
+
   }
   return vet;
 }
@@ -35,7 +35,7 @@ void Org(CC *v){
 
 void Mostrar(CC *v){
   for(int i = 0; i < 255; i++){
-		if(v[i].f != 0)printf("%c  %d\n",v[i].ch, v[i].f);
+    if(v[i].f != 0)printf("%c  %d\n",v[i].ch, v[i].f);
   }
 }
 
@@ -43,17 +43,17 @@ void Mostrar(CC *v){
 int main(){
   FILE *arq;
   CC *vet = IniciarVet();
-	arq = fopen("oi.txt", "r");
+  arq = fopen("oi.txt", "r");
   if(!arq){
-		printf("o arquivo não abriu!");
-		exit(1);
-	}
-	int caractere;
+    printf("o arquivo não abriu!");
+    exit(1);
+  }
+  int caractere;
   while ((caractere = fgetc(arq)) != EOF) {
     putchar(caractere);
-		vet[caractere].f += 1;
+    vet[caractere].f += 1;
   }
-	Org(vet);
-	Mostrar(vet);
-	fclose(arq);
+  Org(vet);
+  Mostrar(vet);
+  fclose(arq);
 }

@@ -98,11 +98,11 @@ int main(){
 
   Point *ponto = IniciarVet(T);
   Preencher(ponto, T);
-  Mostrar(ponto, T);  
+  Mostrar(ponto, T);
 
   printf("\nCalculando Angulo\n");
   Angulo(ponto, T, VetRef);
-  
+
   Mostrar(ponto, T);
 
   OrgAng(ponto, T);

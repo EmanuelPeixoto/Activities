@@ -11,7 +11,7 @@ typedef struct {
     float x;
     float y;
     float a;
-    float t; 
+    float t;
 }Point;
 
 Point* IniciarVet(int size){
@@ -51,9 +51,9 @@ void Mostrar(Point *ponto, int size){
 float Area(Point *ponto, int size){
   float acc = 0, ang = 0, sen = 0, area = 0;
   for(int i = 0; i < size; i++){
-    if(i != (size - 1)) 
+    if(i != (size - 1))
       ang = (ponto[(i + 1)%size].a - ponto[i].a);
-    else 
+    else
       ang = 360 - ponto[i].a + ponto[(i + 1)%size].a;
     float rad = ang * (M_PI / 180.0);
     sen = sin(rad);
@@ -72,7 +72,7 @@ void AngConv(Point *ponto, int size, float *VetRef){
     float ProdEsc = ponto[i].x * VetRef[0] + VetRef[1] * ponto[i].y;
 
     float algo = ProdEsc / (TamVetRef * ponto[i].t);
-    if(algo >= 1)algo = 1; 
+    if(algo >= 1)algo = 1;
     if(algo <= -1)algo = -1;
     float AngRad = acos(algo);
     float AngGraus = AngRad * 180.0 / M_PI;
@@ -98,7 +98,7 @@ Point PontoMedio(int size, Point *point){
   }
   novo_ponto.x = novo_ponto.x/size;
   novo_ponto.y = novo_ponto.y/size;
-  return novo_ponto; 
+  return novo_ponto;
 }
 
 void Transladar(Point pm, Point *Pontos, int size){
@@ -177,7 +177,7 @@ int main(int argc, char** argv){
   Preencher(ponto, T);
   Point pm = PontoMedio(T, ponto);
   //printf("Ponto X medio: %f\nPonto Y medio: %f\n", pm.x, pm.y);
-  //Mostrar(ponto, T);  
+  //Mostrar(ponto, T);
 
   Transladar(pm, ponto, T);
   Tamanho(ponto, T);
@@ -186,7 +186,7 @@ int main(int argc, char** argv){
 
   //printf("\nCalculando Angulo\n");
   AngConv(ponto, T, VetRef);
-  
+
   //Mostrar(ponto, T);
 
   quickSort(0, T - 1, ponto);

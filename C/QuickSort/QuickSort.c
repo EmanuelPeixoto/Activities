@@ -40,7 +40,7 @@ int partition(int *arr, int low, int high) {
 // Função principal do Quick Sort
 void quickSort(int low, int high, int *arr, int vetsize) {
     mostrarvet(arr, vetsize);
-	if (low <= high) {
+  if (low <= high) {
         // Encontra a posição do pivô
         int pi = partition(arr, low, high);
 
