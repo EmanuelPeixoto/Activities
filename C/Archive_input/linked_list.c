@@ -20,6 +20,17 @@ void mostraLista(gom *no) {
   }
 }
 
+void trocaint(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void trocachar(char *a, char *b) {
+    char temp = *a;
+    *a = *b;
+    *b = temp;
+}
 gom *geraNo(char c) {
   gom *no = (gom*)malloc(sizeof(no));
   no->ch = c;
@@ -70,12 +81,14 @@ void bubbleSort(head *root){
     temp2 = root->first;
       while (temp2->prox != NULL){
         if (temp2->cont > temp2->prox->cont){
-          int tempcont = temp2->cont;
+          trocaint(&temp2->cont, &temp2->prox->cont);
+          trocachar(&temp2->ch, &temp2->prox->ch);
+          /*int tempcont = temp2->cont;
           int tempchar = temp2->ch;
           temp2->cont = temp2->prox->cont;
           temp2->ch = temp2->prox->ch;
           temp2->prox->cont = tempcont;
-          temp2->prox->ch = tempchar;
+          temp2->prox->ch = tempchar;*/
         }
         temp2 = temp2->prox;
       }
