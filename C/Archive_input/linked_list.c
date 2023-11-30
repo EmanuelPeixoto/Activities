@@ -76,7 +76,6 @@ void bubbleSort(head *root){
           temp2->ch = temp2->prox->ch;
           temp2->prox->cont = tempcont;
           temp2->prox->ch = tempchar;
-
         }
         temp2 = temp2->prox;
       }
@@ -97,11 +96,12 @@ int main(){
 
   int caractere;
   while ((caractere = fgetc(arq)) != EOF) {
-    //putchar(caractere);
+    putchar(caractere);
     registraDado(caractere, &root);
   }
   fclose(arq);
-  printf("Ordenando...\n");
-  bubbleSort2(&root);
+  mostraLista(root.first);
+  printf("\n\nOrdenando...\n\n\n");
+  bubbleSort(&root);
   mostraLista(root.first);
 }
