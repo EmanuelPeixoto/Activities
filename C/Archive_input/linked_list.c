@@ -15,7 +15,7 @@ typedef struct{
 
 void mostraLista(gom *no) {
   while (no) {
-    printf(" %c: %d \n", no->ch, no->cont);
+    printf(" %c: %d\n", no->ch, no->cont);
     no = no->prox;
   }
 }

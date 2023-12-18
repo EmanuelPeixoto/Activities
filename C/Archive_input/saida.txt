@@ -1,0 +1,166 @@
+Critical systems are these whose failure or malfunction
+may result in high economic losses, damage to the
+environment or loss of human life [SOM 07]. Systems
+building by people, to be used by people, management by people with people informations and with high
+complexity, naturally represent a critical system. In the
+‚Äùprimitive‚Äù Software Engineering, early for over thirty
+years, it was not common to deal with critical systems
+in developing computer systems. A simple way to check
+this is by reviewing the content of the basic texts of
+Software Engineering and Systems Engineering. In the
+last two decades, however, increasingly has considered
+the issue of critical systems more deeply in professional
+journals and inclusion in textbooks chapters dealing
+with critical systems, safety engineering, reliability engineering, engineering protection, socio-technical systems,
+risk and cyber risk, risk management, security and
+auditing, security policy, security engineering software,
+etc.
+With the arrival of the Internet and the rapid growth of
+information technology, computer systems have become
+critical systems, mainly because they contain sensitive
+information from people (personal information form,
+databases, emails, passwords, etc.). In this context, the
+concept of security, first was implemented in the maintenance process when the system was already operating.
+After, has to be considered in the intermediate stages of
+the development process (design and coding) [BAN 06].
+Today, it is imperative to consider this in the early stages
+of development (analysis and design). For this, the classical methodologies and recent development must adapt
+and consider the concept of criticality of new computer
+systems. The purpose of this paper is to contribute with
+some methodological concepts in the implementation of
+security properties in the early stages of the process for
+developing computer systems.
+The layout of the paper is as follows: Section 2
+presents the related literature concerning Requirements
+Engineering in Security Engineering. Section 3, presents
+an overview of the Requirements Domain and Aspects.
+In Section 4 a proposed methodology of requirements
+elicitation. Section 5 presents examples of aspects and
+requirements domains together a case study on an academic ERP, and finally the conclusion in Section 6.
+ Ä: 2
+ ù: 2
+ ‚: 2
+ 
+: 39
+  : 306
+ (: 3
+ ): 3
+ ,: 31
+ -: 1
+ .: 16
+ 0: 2
+ 2: 1
+ 3: 1
+ 4: 1
+ 5: 1
+ 6: 2
+ 7: 1
+ :: 1
+ A: 4
+ B: 1
+ C: 1
+ D: 1
+ E: 6
+ F: 1
+ I: 5
+ M: 1
+ N: 1
+ O: 1
+ P: 1
+ R: 3
+ S: 11
+ T: 3
+ W: 1
+ [: 2
+ ]: 2
+ a: 115
+ b: 15
+ c: 84
+ d: 52
+ e: 256
+ f: 38
+ g: 44
+ h: 60
+ i: 164
+ j: 1
+ k: 5
+ l: 68
+ m: 66
+ n: 153
+ o: 138
+ p: 58
+ q: 4
+ r: 110
+ s: 150
+ t: 174
+ u: 33
+ v: 16
+ w: 22
+ x: 5
+ y: 50
+
+
+Ordenando...
+
+
+ -: 1
+ 2: 1
+ 3: 1
+ 4: 1
+ 5: 1
+ 7: 1
+ :: 1
+ B: 1
+ C: 1
+ D: 1
+ F: 1
+ M: 1
+ N: 1
+ O: 1
+ P: 1
+ W: 1
+ j: 1
+ Ä: 2
+ ù: 2
+ ‚: 2
+ 0: 2
+ 6: 2
+ [: 2
+ ]: 2
+ (: 3
+ ): 3
+ R: 3
+ T: 3
+ A: 4
+ q: 4
+ I: 5
+ k: 5
+ x: 5
+ E: 6
+ S: 11
+ b: 15
+ .: 16
+ v: 16
+ w: 22
+ ,: 31
+ u: 33
+ f: 38
+ 
+: 39
+ g: 44
+ y: 50
+ d: 52
+ p: 58
+ h: 60
+ m: 66
+ l: 68
+ c: 84
+ r: 110
+ a: 115
+ o: 138
+ s: 150
+ n: 153
+ i: 164
+ t: 174
+ e: 256
+  : 306
